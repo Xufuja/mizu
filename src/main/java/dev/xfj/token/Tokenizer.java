@@ -15,7 +15,7 @@ public class Tokenizer {
                 buffer.append(character);
                 i++;
 
-                while (Character.isLetter(string.charAt(i)) || Character.isDigit(string.charAt(i))) {
+                while (Character.isLetterOrDigit(string.charAt(i))) {
                     buffer.append(string.charAt(i));
                     i++;
                 }
