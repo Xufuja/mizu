@@ -1,7 +1,11 @@
 package dev.xfj;
 
+import dev.xfj.token.Token;
+import dev.xfj.token.Tokenizer;
+
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,8 +16,10 @@ public class Main {
         }
         try {
             String input = Files.readString(Path.of(args[0]));
-            System.out.println(input);
-        }catch (Exception e) {
+            Tokenizer tokenizer = new Tokenizer();
+            List<Token> tokens = tokenizer.tokenize(input);
+            tokens.forEach(System.out::println);
+        } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
     }
