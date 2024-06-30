@@ -21,7 +21,7 @@ public class Tokenizer {
             } else if (token.equals(" ")) {
                 continue;
             } else {
-                System.err.println("Unhandled token!");
+                System.err.println("Unhandled type!");
                 System.exit(1);
             }
         }

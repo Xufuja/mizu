@@ -1,6 +1,6 @@
 package dev.xfj.token;
 
-enum TokenType {
+public enum TokenType {
     _return,
     int_lit,
     semi
